@@ -21,6 +21,8 @@ function Category() {
 
   const params = useParams()
 
+  console.log('PARAMS', params)
+
   useEffect(() => {
     const fetchListings = async () => {
       try {
@@ -44,6 +46,7 @@ function Category() {
         const listings = []
 
         querySnap.forEach((doc) => {
+          console.log('DATA', doc.data())
           return listings.push({
             id: doc.id,
             data: doc.data(),
