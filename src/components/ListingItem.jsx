@@ -25,7 +25,7 @@ function ListingItem({ listing, id, onEdit, onDelete }) {
             {listing.offer
               ? listing.discountedPrice
                   .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ',') //reg to replace commas
               : listing.regularPrice
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
